@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Active Slide - fullPage.js</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords"  content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+</head>
+<body>
+<ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+    <li data-menuanchor="home"><a href="#home">Second slide</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+</ul>
+
+<div id="fullpage">
+    <div class="section " id="section0">
+        <h1>Section 1</h1>
+    </div>
+    <div class="section active" id="section1">
+        <div class="slide" id="slide1">
+            <div class="intro">
+                <h1>Slide 2.1</h1>
+                <iframe data-src="auto-height.html"></iframe>
+            </div>
+        </div>
+        <div class="slide active head" id="home">
+            <div class="intro" >
+                <h1>The College Prep Tutor</h1>
+                <h2>
+                <strong>Building
+                    Skills For the Classroom </strong> Educating for the Future</h2>
+                <p class="intro p">
+                    I'm Andrea Ryan a tutor, and a
+                    strategic consultant based in Richmond, Va. Through my
+                    experience as a tutor and teacher over the past 8 years
+                    I have developed a unique method and approach to
+                    tutoring that is effective as it is personalized and
+                    intended to facilitate long term changes for success
+                    well beyond time spent tutoring. I am guiding hand to my
+                    students, proactive collaborator with their teachers,
+                    and strategic consultants for their parents.
+                </p>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Slide 2.3</h1>
+        </div>
+
+    </div>
+    <div class="section" id="section2">
+        <div class="intro">
+            <h1>Section 3</h1>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        menu: '#menu',
+        lazyLoad: true
+    });
+</script>
+
+</body>
+</body>
+</html>

@@ -17,6 +17,18 @@ gulp.task('css', function(done) {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist'));
         done();
+    gulp.src('./src/stylesheet.css')
+        .pipe(sourcemaps.init())
+        .pipe(gulp.dest('./dist'))
+        .pipe(minifyCss({
+            compatibility: 'ie8',
+            advanced: false,
+            keepSpecialComments: '1'
+        }))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dist'));
+    done();
 });
 
 gulp.task('js', function(done) {
